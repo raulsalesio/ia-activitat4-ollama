@@ -4,7 +4,7 @@
 
 **Predicció (abans de començar):** què creieu que passarà amb les respostes quan pugeu la temperatura?
 
-**La vostra predicció:**
+**La vostra predicció:** Segons s'augmenti la temperatura, les respostes seran menys comúns.
 
 ## Primera prova: una paraula
 
@@ -27,9 +27,9 @@
 
 | Temperatura | Resposta 1 | Resposta 2 | Resposta 3 |
 | :- | :- | :- | :- |
-| 0 | | | |
-| 0.8 | | | |
-| 1.5 | | | |
+| 0 |Il·lustració|Estratègia|Estratègia|
+| 0.8 |Estratègia|Estratègia|Estratègia|
+| 1.5 |Exuberant|Estratègia||
 
 ## Segona prova: una pregunta amb una sola resposta
 
@@ -43,24 +43,24 @@
 
 | Temperatura | Resposta 1 | Resposta 2 | Resposta 3 |
 | :- | :- | :- | :- |
-| 0 | | | |
-| 1.5 | | | |
+| 0 |París|París|París|
+| 1.5 |París|París|París|
 
 ## Preguntes
 
 1. Mireu la taula 1. Les tres respostes amb temperatura 0 són iguals? Per què? Compteu les lletres de la paraula: en té més de 10? Que sempre surti la mateixa paraula vol dir que sigui correcta?
 
-   **Resposta:**
+   **Resposta:** Gairebé són iguals (Estratègia surt 2 de 3 cops) perquè a temperatura 0 el model tria quasi sempre l'opció més probable. La paraula Estratègia té 10 lletres, això demostra que ser previsible i repetir una resposta no garanteix que el model encerti ni compleixi la instrucció.
 
 2. Què passa quan pugeu la temperatura? Surten paraules diferents? N'hi ha alguna que no tingui més de 10 lletres o que no sembli una paraula real?
 
-   **Resposta:**
+   **Resposta:** A temperatura 1.5 surten paraules noves. Totes són reals, però Exuberant només té 9 lletres i Estratègia 10, així que hi ha més varietat però el model falla més a l'hora de complir la condició de longitud.
 
 3. Mireu la taula 2. Les respostes sobre la capital canvien tant com les de la paraula quan puja la temperatura? Per què creieu que la temperatura hi té tan poc efecte? (Pista: quantes respostes correctes té cada pregunta? La temperatura només dona varietat quan el model dubta entre diverses opcions.)
 
-   **Resposta:**
+   **Resposta:** No canvien gens, sempre surt París. Com que la pregunta només té una resposta correcta i el model n'està gairebé 100% segur, no dubta entre altres opcions i apujar la temperatura no altera el resultat.
 
 4. Amb les vostres paraules: què fa el paràmetre `temperature`?
 
-   **Resposta:**
+   **Resposta:** Controla l'aleatorietat de les respostes. A temperatura baixa el model és conservador i tria l'opció més probable. A temperatura alta s'arrisca amb paraules menys probables.
 

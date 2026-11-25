@@ -35,21 +35,21 @@
 
 | Configuració | temperature | top_k | top_p | Emojis diferents (de 15) |
 | :- | :- | :- | :- | :- |
-| A (referència) | 1 | 0 | 1 | |
-| B | 1 | 2 | 1 | |
-| C | 1 | 0 | 0.3 | |
-| D | 2.5 | 0 | 1 | |
-| E | 2.5 | 64 | 0.95 | |
+| A (referència) | 1 | 0 | 1 |4|
+| B | 1 | 2 | 1 |2|
+| C | 1 | 0 | 0.3 |1|
+| D | 2.5 | 0 | 1 |8|
+| E | 2.5 | 64 | 0.95 |4|
 
 ## Preguntes
 
 1. Ordeneu A, B i C de més a menys varietat. Per què `top_k` 2 i `top_p` 0.3 redueixen el nombre d'emojis diferents?
 
-   **Resposta:**
+   **Resposta:** De més a menys varietat l'ordre és A (4), B (2) > i (1). Això passa perquè top_k 2 talla la llista i obliga el model a triar exclusivament entre els 2 candidats més probables, descartant la resta. D'altra banda, top_p 0.3 només deixa passar els tokens més probables fins a sumar un 30% de probabilitat acumulada; com que l'emoji 😊 ja supera sol aquest 30% de probabilitat, queda com a únic candidat possible i surt les 15 vegades.
 
 2. Quin valor de `top_k` hauria de tenir la configuració B perquè el model es comportés com si la temperatura fos 0? Per què?
 
-   **Resposta:**
+   **Resposta:** 
 
 3. Compareu les configuracions D i E. Quants emojis diferents surten a cada una? Quin és l'emoji més inesperat o amb menys sentit com a resposta, i a quina configuració ha aparegut? Per què `top_k` i `top_p` ajuden a evitar respostes sense sentit quan la temperatura és alta?
 

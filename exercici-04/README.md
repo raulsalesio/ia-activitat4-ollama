@@ -26,20 +26,20 @@
 
 | Llavor (seed) | Nom 1 | Nom 2 | Nom 3 | Són iguals? |
 | :- | :- | :- | :- | :- |
-| Cap (aleatòria) | | | | |
-| 42 | | | | |
+| Cap (aleatòria) |Simbiòtica de Pixels|Quimera Algorítmica|Simbiòtica de Polígonals Quantitzat|No|
+| 42 |Bio-algoritmes de Carxofes|Bio-algoritmes de Carxofes|Bio-algoritmes de Carxofes|Si|
 
 ## Preguntes
 
 1. Quan la llavor és la mateixa, els tres noms són iguals o diferents? Proveu ara una altra llavor (per exemple, `--seed 43`): surt el mateix nom?
 
-   **Resposta:**
+   **Resposta:** Quan la llavor es la mateixa, els noms són identics, mentre que si ho fem sense llavor, es generen diferents. Amb la llavor 43 també surten noms iguals pero diferents al de la 42
 
 2. Penseu en una situació en què voldríeu obtenir exactament la mateixa resposta dues vegades (per exemple, per trobar un error en un programa). Quina?
 
-   **Resposta:**
+   **Resposta:** En proves automatitzades la hora de programar, per exemple en testing o debugging, ja que permet reproduir el mateix error tantes vegades com calgui fins trobar un error
 
 3. Compareu els vostres noms amb els d'una altra persona de la classe que hagi fet servir la mateixa llavor. Són iguals? Per què creieu que pot passar?
 
-   **Resposta:**
+   **Resposta:** Al comparar-ho han sortit els mateixos resultats. Ha passat perque el tant la ia com el model son els mateixos i pertant els tokens que utilitza si el script es el mateix, haura de generar el mateix text la majoria de les vegades.
 

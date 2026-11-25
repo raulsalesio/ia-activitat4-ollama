@@ -4,7 +4,7 @@
 
 **Predicció (abans de començar):** el primer codi que us doni el model funcionarà? Quants intents us caldran?
 
-**La vostra predicció:**
+**La vostra predicció:** Crec que no funcionarà a la primera pero que una vegada li passi el error ho solucionarà a la primera.
 
 1. **Configureu l'entorn de Python.** Aquest exercici i els següents fan servir Python. No cal crear cap carpeta nova: feu-ho dins del mateix repositori. Només cal fer-ho un cop, amb Visual Studio Code:
 
@@ -25,7 +25,7 @@
 
 3. Demaneu-li l'script. No li doneu codi: expliqueu-li què ha de fer.
 
-   **Què ha de fer l'script:**
+   **Què ha de fer l'script:** 
 
    - El fitxer es diu `lab.py` i es crida així:
 
@@ -78,7 +78,7 @@
 
 ## El vostre prompt final
 
-_Enganxeu aquí el prompt que heu donat al model per generar `lab.py`._
+_Escriu un script complet en Python anomenat lab.py utilitzant les llibreries argparse, sys i ollama. L'script ha de rebre un argument posicional obligatori anomenat "prompt" de tipus text i dues opcions opcionals amb nom en qualsevol ordre: "--vegades" (enter, valor per defecte 5) i "--temperature" (float, valor per defecte 1.0). Si s'executa sense cap argument (len(sys.argv) == 1), abans de cridar parse_args() ha de mostrar l'ajuda amb parser.print_help() i sortir sense error amb sys.exit(0). Ha de fer servir el model "gemma3:4b" i executar el prompt tantes vegades com indiqui "--vegades" fent crides independents amb ollama.generate(model="gemma3:4b", prompt=prompt, options={"temperature": temperature}). Tingues en compte que tots els paràmetres del model han d'anar dins del diccionari "options" i mai com a arguments directes de generate(), i que generate() retorna un objecte on el text de la resposta es troba a r["response"], així que cal extreure r["response"].strip() abans d'imprimir-lo. Primer ha d'imprimir les opcions utilitzades i després cada resposta numerada seguint exactament aquest format de sortida: Prompt: Digues una paraula, a la línia següent vegades: 3, a la següent temperature: 0.8, una línia en blanc i després 1. Algorisme, 2. Microprocessador, 3. Recursivitat. Respon únicament amb el codi complet en Python dins d'un sol bloc de codi, sense cap explicació abans ni després._
 
 Deseu l'script `lab.py` a l'arrel del repositori (no en aquesta carpeta).
 
@@ -86,9 +86,9 @@ Deseu l'script `lab.py` a l'arrel del repositori (no en aquesta carpeta).
 
 1. Quants intents us han calgut? Quins errors ha comès el model (nom del model, paràmetres, lectura dels arguments...) i com els heu resolt?
 
-   **Resposta:**
+   **Resposta:** He necessitat 4 intents per fer-ho, ja que en els dos primers importava malament la llibreria de Ollama i en els altres ha possat la temperatura fora de les opcions. Ho he ressolt pasant-li la sortida per consola que treia el error.
 
 2. Heu llegit el codi abans d'executar-lo? Per què és important entendre el que s'executa a l'ordinador, encara que l'hagi escrit un model?
 
-   **Resposta:**
+   **Resposta:** Sí, per tal d'evitar errors o faltes de lògica.
 
